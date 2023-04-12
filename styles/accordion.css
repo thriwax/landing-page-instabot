@@ -1,0 +1,116 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding-top: 51px;
+}
+
+.content {
+  width: 1344px;
+}
+
+.menu-item {
+  margin-bottom: 5px;
+  border-radius: 20px;
+  background-color: #e7e7e7;
+}
+
+button.accordion {
+  font-family: "Visuelt Pro";
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  background: #273548;
+  outline: none;
+  text-align: left;
+  padding: 13px 20px;
+  cursor: pointer;
+  transition: background-color 2s linear;
+  font-weight: 500;
+  font-size: 36px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 32px;
+}
+
+.main-content :nth-child(odd) button {
+  background: rgb(255, 255, 255);
+}
+
+.main-content :nth-child(even) button {
+  background-color: #e7e7e7;
+  background: rgb(255, 255, 255);
+}
+
+button.accordion::after {
+  padding-top: 10px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: url("../images/icons/open-a.svg");
+  font-size: 16px;
+  float: right;
+  background: rgb(255, 255, 255);
+}
+
+button.accordion.is-open::after {
+  content: url("../images/icons/open-b.svg");
+  color: white;
+}
+
+button.accordion:hover::after {
+  color: white;
+}
+
+button.accordion:hover,
+button.accordion.is-open {
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+.submenu {
+  display: none;
+  list-style: none;
+  background-color: #e7e7e7;
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #4f4f4f;
+  font-size: 15px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+.submenu.is-open {
+  display: block;
+}
+
+.accordion_answer {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 135%;
+  color: #808080;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}/*# sourceMappingURL=accordion.css.map */
